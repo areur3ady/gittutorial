@@ -12,7 +12,7 @@
 |git diff `"filename"`|`git init` 之后，在文件夹下添加和修改文件，在`add`之前，可以比较修改文件前后变化（实际上是工作区和版本库间的比较）|版本退回|
 |git status|仓库当前的状态|版本退回|
 |git log<br>git log --pretty=oneline  <br>  git reflog|查看对仓库操作历史;  <br>  简化显示;  <br>  查看对仓库操作的以往历史|版本退回|
-|git reset --hard HEAD^  <br>  git reset --hard HEAD^^  <br>  git reset --hard HEAD~`"n"`|倒退回前一版本;  <br>  两个版本前的版本;  <br>  n个版本之前的版本|版本退回|
+|git reset HEAD^  <br>  git reset HEAD^^  <br>  git reset HEAD~`"n"`  <br>  git reset --hard  <br>  git reset --mixed|倒退回前一版本;  <br>  两个版本前的版本;  <br>  n个版本之前的版本，默认参数为--mixed，表示commit退回先前版本，但差异部分存储在工作区  <br>  参数--hard表示commit退回先前版本，并且将版本间差异删除，不存放在工作区|版本退回|
 |git reset --hard `"commidid"`|倒退到commitid为`"commitid"`的版本（commitid可以只写部分）|版本退回|
 |![工作区和版本库](https://static.liaoxuefeng.com/files/attachments/919020037470528/0)||工作区和版本库|
 |![git add 的本质](https://static.liaoxuefeng.com/files/attachments/919020074026336/0)|git add命令实际上就是把要提交的所有修改放到暂存区（Stage）|工作区和版本库|
